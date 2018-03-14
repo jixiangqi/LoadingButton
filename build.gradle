@@ -1,0 +1,40 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.2.30'
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+//配置工程用到的编译版本和support版本
+ext {
+    supportLibraryVersion = '27.0.1'    //support库的版本
+    compileSdkVersion = 27
+    minSdkVersion = 14
+    targetSdkVersion = 27
+
+    appcompat = "com.android.support:appcompat-v7:$supportLibraryVersion"
+    kotlinStdlibJdk = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="cn.langwazi.sample.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="加载中状态时会屏蔽后续的触摸事件" />
+
+    <cn.langwazi.loadingbutton.LoadingButton
+        android:id="@+id/loadingButton"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:text="点我开始loading"
+        app:lbIndicatorColor="@color/colorAccent"
+        app:lbIndicatorName="cn.langwazi.loadingbutton.indicators.BallIndicator"
+        app:lbPaddingBottom="10dp"
+        app:lbPaddingTop="10dp" />
+
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="停止loading" />
+
+
+</LinearLayout>
